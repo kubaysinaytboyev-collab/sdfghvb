@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Profilim — Shaxs Guvohnomasi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="phone" id="phone">
+    <!-- ====================== MAIN APP (PROFILE) ====================== -->
+    <main class="app" id="app">
+      <!-- Header -->
+      <header class="topbar">
+        <div class="topbar__id">
+          <h3 class="topbar__name">A. Kubaysin</h3>
+          <p class="topbar__phone">+998 (90) 559-99-33</p>
+        </div>
+        <div class="topbar__actions">
+          <button class="iconbtn" type="button" aria-label="Ma'lumotlarni yashirish" data-icon="eye-off"></button>
+          <button class="iconbtn" type="button" aria-label="Sozlamalar" data-icon="gear"></button>
+        </div>
+      </header>
+      <!-- UZB ID card (upload trigger) -->
+      <section class="idwrap">
+        <button class="idcard" id="uzbButton" type="button" aria-label="Rasm yuklash uchun bosing">
+          <!-- <div class="idcard__header" style="padding:0;overflow:hidden;border-radius:14px 14px 0 0;height:72px;display:block;">
+            <img id="headerPhoto" src="image/photo1.jpg" alt="header"
+              style="width:100%;height:100%;object-fit:cover;display:block;" />
+          </div> -->
+
+          <div class="plate">
+            <span class="plate__text">UZB</span>
+            <span class="plate__side">
+            <span class="plate__stripes" data-flagbars></span>
+            <span class="plate__uz">UZ</span>
+            </span>
+          </div>
+
+          <span class="idcard__hint" style="display:none">
+            <!-- <span class="idcard__hinticon" data-icon="upload"></span>
+            Rasm yuklash
+          </span> -->
+        </button>
+      </section>
+
+      <!-- Primary action -->
+      <section class="cta-wrap">
+        <button class="cta" type="button">
+          <span class="cta__icon" data-icon="id"></span>
+          Raqamli hujjatlar va ma'lumotlar
+        </button>
+      </section>
+
+      <!-- Menu list -->
+      <nav class="menu" aria-label="Bo'limlar">
+        <button class="menu__item" type="button">
+          <span class="menu__icon" data-icon="clipboard"></span>
+          <span class="menu__text">
+            <span class="menu__title">Arizalarim va sharhlarim</span>
+            <span class="menu__sub">Tarixi, holati va kuzatish</span>
+          </span>
+          <span class="menu__chev" data-icon="chevron"></span>
+        </button>
+
+        <button class="menu__item" type="button">
+          <span class="menu__icon" data-icon="health"></span>
+          <span class="menu__text">
+            <span class="menu__title">Mening salomatligim</span>
+            <span class="menu__sub">Salomatligimga tegishli ma'lumotnomalar, oilav...</span>
+          </span>
+          <span class="menu__chev" data-icon="chevron"></span>
+        </button>
+
+        <button class="menu__item" type="button">
+          <span class="menu__icon" data-icon="education"></span>
+          <span class="menu__text">
+            <span class="menu__title">Ta'lim</span>
+            <span class="menu__sub">Attestat va diplomlar</span>
+          </span>
+          <span class="menu__chev" data-icon="chevron"></span>
+        </button>
+
+        <button class="menu__item" type="button">
+          <span class="menu__icon" data-icon="family"></span>
+          <span class="menu__text">
+            <span class="menu__title">Mening oilam</span>
+            <span class="menu__sub">Oila tarkibi</span>
+          </span>
+          <span class="menu__chev" data-icon="chevron"></span>
+        </button>
+
+        <button class="menu__item" type="button">
+          <span class="menu__icon" data-icon="home"></span>
+          <span class="menu__text">
+            <span class="menu__title">Mening uyim</span>
+            <span class="menu__sub">Mulk va kadastr</span>
+          </span>
+          <span class="menu__chev" data-icon="chevron"></span>
+        </button>
+      </nav>
+    </main>
+
+    <!-- ====================== BOTTOM TAB BAR ====================== -->
+    <nav class="tabbar" aria-label="Asosiy menyu">
+      <button class="tab" type="button">
+        <span class="tab__icon" data-icon="tab-home"></span>
+        <span class="tab__label">Asosiy</span>
+      </button>
+      <button class="tab" type="button">
+        <span class="tab__icon" data-icon="tab-apps"></span>
+        <span class="tab__label">Xizmatlar</span>
+      </button>
+      <button class="tab tab--qr" type="button" aria-label="QR kod">
+        <span class="tab__qr" data-icon="qr"></span>
+      </button>
+      <button class="tab" type="button">
+        <span class="tab__icon" data-icon="tab-wallet"></span>
+        <span class="tab__label">To'lovlar</span>
+      </button>
+      <button class="tab tab--active" type="button">
+        <span class="tab__icon" data-icon="tab-user"></span>
+        <span class="tab__label">Profilim</span>
+      </button>
+    </nav>
+
+    <!-- ====================== IMAGE VIEWER MODAL ====================== -->
+    <div class="viewer" id="viewer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Rasmlar ko'rgichi">
+      <div class="viewer__scrim"></div>
+
+      <button class="viewer__close" id="viewerClose" type="button" aria-label="Yopish" data-icon="close"></button>
+
+      <div class="viewer__banner">
+        Oxirgi yangilanish sanasi: <b>20 iyun 2026</b>
+      </div>
+
+      <div class="viewer__stage">
+        <div class="viewer__track" id="viewerTrack"></div>
+      </div>
+
+      <div class="viewer__dots" id="viewerDots"></div>
+
+      <div class="viewer__actions">
+        <button class="vbtn vbtn--ghost" id="rotateBtn" type="button">
+          <span class="vbtn__icon" data-icon="rotate"></span>
+          Aylantirish
+        </button>
+        <button class="vbtn vbtn--primary" id="showBtn" type="button">
+          <span class="vbtn__icon" data-icon="qr"></span>
+          Ko'rsatish
+        </button>
+      </div>
+    </div>
+
+    
+  </div>
+
+  <script crossorigin="anonymous" src="//unpkg.com/same-runtime/dist/index.global.js"></script>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
